@@ -38,8 +38,7 @@ module.exports = async function handler(req, res) {
       offset = data.offset || null;
     } while (offset);
 
-    // Cache for 60 s on the edge; stale-while-revalidate keeps it snappy
-    res.setHeader('Cache-Control', 's-maxage=60, stale-while-revalidate=120');
+    res.setHeader('Cache-Control', 'no-store');
     return res.status(200).json({ count });
   } catch (err) {
     console.error('Count fetch failed:', err.message);
