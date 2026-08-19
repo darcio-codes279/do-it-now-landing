@@ -28,7 +28,7 @@ module.exports = async function handler(req, res) {
     return res.status(500).json({ error: 'Server configuration error' });
   }
 
-  const url = `https://api.airtable.com/v0/${BASE_ID}/${TABLE_ID}`;
+  const url = `https://api.airtable.com/v0/${BASE_ID}/${encodeURIComponent(TABLE_ID)}`;
 
   const response = await fetch(url, {
     method: 'POST',
