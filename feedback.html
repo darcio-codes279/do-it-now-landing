@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Feedback — Do It Now</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --void: #090909;
+      --ink: #151515;
+      --graphite: #292929;
+      --bone: #F3F0E8;
+      --paper: #FAF9F5;
+      --newsprint: #ECEAE2;
+      --pewter: #B9B5A9;
+      --signal: #FF5A36;
+      --hairline-light: #E6E2D8;
+      --border-light: var(--hairline-light);
+      --accent: var(--signal);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Archivo', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.6;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(250,249,245,0.88);
+      -webkit-backdrop-filter: blur(12px) saturate(160%);
+      backdrop-filter: blur(12px) saturate(160%);
+      border-bottom: 1px solid var(--border-light);
+      padding: 16px 0;
+    }
+    .wrap {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .site-nav .wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .site-nav .brand {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      color: var(--ink);
+    }
+    .site-nav .brand span {
+      font-weight: 800;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+    .site-nav .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+    .site-nav .back,
+    .site-nav .nav-link {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      color: var(--pewter);
+    }
+    .site-nav .back:hover,
+    .site-nav .nav-link:hover { color: var(--ink); text-decoration: none; }
+
+    main { padding: 48px 0 96px; }
+
+    .eyebrow {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--pewter);
+      margin-bottom: 16px;
+    }
+    h1 {
+      font-size: 36px;
+      font-weight: 800;
+      letter-spacing: -.02em;
+      line-height: 1.15;
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      font-size: 15px;
+      color: var(--pewter);
+      margin-bottom: 40px;
+    }
+
+    .feedback-frame-wrap {
+      border: 1px solid var(--border-light);
+      border-radius: 12px;
+      overflow: hidden;
+      background: #fff;
+    }
+    .feedback-frame-wrap iframe {
+      display: block;
+      width: 100%;
+      min-height: 720px;
+      border: none;
+    }
+
+    footer {
+      border-top: 1px solid var(--border-light);
+      padding: 32px 0;
+    }
+    footer .inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    footer .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    footer .brand span {
+      font-weight: 800;
+      font-size: 13px;
+      text-transform: uppercase;
+    }
+    footer nav {
+      display: flex;
+      gap: 24px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+    footer nav a { color: var(--ink); }
+    footer nav a:hover { color: var(--accent); text-decoration: none; }
+    footer .tagline {
+      font-size: 12px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--pewter);
+    }
+    .powered {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 11px;
+      color: var(--pewter);
+    }
+    .powered a { color: var(--pewter); }
+    .powered a:hover { opacity: .6; text-decoration: none; }
+  </style>
+</head>
+<body>
+
+  <header class="site-nav">
+    <div class="wrap">
+      <a href="./" class="brand"><span>Do It Now</span></a>
+      <div class="nav-links">
+        <a href="./" class="back">← Back to home</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+      <div class="eyebrow">Community</div>
+      <h1>Feedback</h1>
+      <p class="subtitle">Share ideas, report bugs, and vote on what we build next.</p>
+
+      <div class="feedback-frame-wrap">
+        <iframe
+          src="https://doit-now.clearflask.com/feedback"
+          title="Do It Now Feedback Board"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="inner">
+        <a href="./" class="brand"><span>Do It Now</span></a>
+        <nav>
+          <a href="./feedback.html">Feedback</a>
+          <a href="./privacy-policy.html">Privacy Policy</a>
+          <a href="./terms-of-service.html">Terms of Service</a>
+        </nav>
+        <span class="tagline">Choose action before distraction.</span>
+      </div>
+      <div class="powered">
+        <a href="https://www.desejos-studio.xyz/" target="_blank" rel="noopener noreferrer">Powered by Desejos Studio</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

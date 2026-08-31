@@ -32,6 +32,12 @@
     a:hover { text-decoration: underline; }
 
     .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(250,249,245,0.88);
+      -webkit-backdrop-filter: blur(12px) saturate(160%);
+      backdrop-filter: blur(12px) saturate(160%);
       border-bottom: 1px solid var(--border-light);
       padding: 16px 0;
     }
@@ -58,14 +64,21 @@
       text-transform: uppercase;
       letter-spacing: .08em;
     }
-    .site-nav .back {
+    .site-nav .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+    .site-nav .back,
+    .site-nav .nav-link {
       font-size: 12px;
       font-weight: 600;
       letter-spacing: .04em;
       text-transform: uppercase;
       color: var(--pewter);
     }
-    .site-nav .back:hover { color: var(--ink); text-decoration: none; }
+    .site-nav .back:hover,
+    .site-nav .nav-link:hover { color: var(--ink); text-decoration: none; }
 
     main { padding: 64px 0 96px; }
 
@@ -165,7 +178,10 @@
   <header class="site-nav">
     <div class="wrap">
       <a href="./" class="brand"><span>Do It Now</span></a>
-      <a href="./" class="back">← Back to home</a>
+      <div class="nav-links">
+        <a href="./feedback.html" class="nav-link">Feedback</a>
+        <a href="./" class="back">← Back to home</a>
+      </div>
     </div>
   </header>
 
@@ -256,6 +272,7 @@
       <div class="inner">
         <a href="./" class="brand"><span>Do It Now</span></a>
         <nav>
+          <a href="./feedback.html">Feedback</a>
           <a href="./privacy-policy.html">Privacy Policy</a>
           <a href="./terms-of-service.html">Terms of Service</a>
         </nav>
