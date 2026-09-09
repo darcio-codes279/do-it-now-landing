@@ -535,5 +535,20 @@ document.addEventListener('DOMContentLoaded', async function() {
     })();
   </script>
 
+  <script>
+    (function () {
+      function addCookiesLink() {
+        var nav = document.querySelector('footer nav');
+        if (!nav || nav.querySelector('a[href*="cookies-policy.html"]')) return;
+        var link = document.createElement('a');
+        link.href = './cookies-policy.html';
+        link.textContent = 'Cookies Policy';
+        nav.appendChild(link);
+      }
+      addCookiesLink();
+      new MutationObserver(addCookiesLink).observe(document.body, { childList: true, subtree: true });
+    })();
+  </script>
+
 </body>
 </html>
