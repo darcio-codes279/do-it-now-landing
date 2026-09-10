@@ -15,7 +15,7 @@ module.exports = async function handler(req, res) {
   }
 
   // Fetch all records with minimal payload (just the Email field).
-  // The cap is 50, so pagination is unlikely but handled for correctness.
+  // The cap is 100, so pagination is unlikely but handled for correctness.
   const base = `https://api.airtable.com/v0/${BASE_ID}/${encodeURIComponent(TABLE_ID)}?fields[]=Email&pageSize=100`;
 
   let count = 0;
