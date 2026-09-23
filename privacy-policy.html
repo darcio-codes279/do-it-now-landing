@@ -213,7 +213,7 @@
     <div class="wrap">
       <div class="eyebrow">Legal</div>
       <h1>Privacy Policy</h1>
-      <p class="meta">Effective date: September 10, 2026 &nbsp;·&nbsp; Last updated: September 10, 2026</p>
+      <p class="meta">Effective date: September 23, 2026 &nbsp;·&nbsp; Last updated: September 23, 2026</p>
 
       <div class="prose">
         <p>Do It Now ("we", "our", or "us") is operated by Desejos Studio. This policy explains what information the Do It Now mobile application ("App") collects, how it is used, and what it cannot see or access.</p>
@@ -253,12 +253,16 @@
             </tr>
             <tr>
               <td>Accessibility Service (Android, optional)</td>
-              <td>Used to detect when you open a selected app on Android. The service reads only the foreground app package name. It cannot read screen content, notifications, keystrokes, messages, or any activity inside other apps.</td>
+              <td>Used to detect when a selected app enters the foreground so Do It Now can start your pause challenge. The service listens only for window-change events and reads only the foreground app package name to compare it with the apps you selected. This information is used on-device, stored locally, and is not sent to or shared with Do It Now, Desejos Studio, or third parties. The service cannot read screen content, text fields, notifications, keystrokes, messages, or activity inside other apps, and it cannot perform gestures or actions in other apps. You can turn this access off at any time in Android Settings.</td>
             </tr>
           </tbody>
         </table>
 
-        <h2>4. What the App Stores Locally</h2>
+        <h2>4. Android Accessibility Data</h2>
+        <p>If you enable the optional Android Accessibility Service, Do It Now receives window-change events while the service is active. It uses the package name associated with an event only to determine whether the app entering the foreground is one you selected for protection and whether to start your pause challenge.</p>
+        <p>The service does not retrieve window content or accessibility nodes. It does not read or record messages, notifications, screen content, text fields, keystrokes, passwords, or media, and it does not perform gestures or actions inside other apps. Accessibility data used for this feature remains on your device and is not transmitted, shared, or used for advertising. You may disable the service at any time through Android Settings. If you do not enable it, the rest of the App remains usable, although automatic Android intervention will not operate.</p>
+
+        <h2>5. What the App Stores Locally</h2>
         <p>The following data is stored on your device only and is never transmitted to our servers:</p>
         <ul>
           <li>Your intervention windows (time ranges and active days)</li>
@@ -271,7 +275,7 @@
         </ul>
         <p>This data lives in a SQLite database on your device. Uninstalling the App removes it entirely.</p>
 
-        <h2>5. What the App Cannot See</h2>
+        <h2>6. What the App Cannot See</h2>
         <p>These data types are never accessed, recorded, or transmitted — by design:</p>
         <ul>
           <li>The content of your messages, emails, or social media feeds</li>
@@ -284,37 +288,37 @@
           <li>Your notifications</li>
         </ul>
 
-        <h2>6. Analytics (Opt-In Only)</h2>
+        <h2>7. Analytics (Opt-In Only)</h2>
         <p>Analytics are <strong>disabled by default</strong>. You are asked during onboarding whether you wish to share anonymous usage data to help improve the App. You can change this preference at any time in Settings.</p>
         <p>If you opt in, we use <strong>PostHog</strong> to collect anonymous usage data such as challenge completion, paywall views, feature interactions, app version, operating system, and event timestamps. Each event is tagged with a randomly generated identifier that is not linked to your name, email, Apple ID, Google account, or any personal information. We do not collect advertising identifiers (IDFA/GAID), use this data for advertising, or track you across other companies' apps and websites. PostHog is configured not to store your IP address.</p>
         <p>Your habit data, app selections, intentions, voice audio, and speech transcripts are <strong>never</strong> sent to PostHog.</p>
         <p>PostHog's privacy policy: <a href="https://posthog.com/privacy" target="_blank" rel="noopener noreferrer">posthog.com/privacy</a></p>
 
-        <h2>7. Crash Reporting (Sentry, Opt-In Only)</h2>
+        <h2>8. Crash Reporting (Sentry, Opt-In Only)</h2>
         <p>Crash diagnostics are disabled by default and are enabled only when you opt in to anonymous analytics and diagnostics during onboarding or in Settings. When enabled, <strong>Sentry</strong> receives anonymised error and crash reports to help us identify and fix technical problems. Reports may contain error details, app version, operating system, diagnostic state (for example, subscription status or the feature that was active), and a stable anonymous identifier for error correlation. Session Replay is disabled. Reports do not contain user-entered content, task text, intention text, audio, speech transcripts, app names, or advertising identifiers.</p>
         <p>Sentry's privacy policy: <a href="https://sentry.io/privacy/" target="_blank" rel="noopener noreferrer">sentry.io/privacy</a></p>
 
-        <h2>8. Subscriptions (RevenueCat)</h2>
+        <h2>9. Subscriptions (RevenueCat)</h2>
         <p>Subscription management is handled by <strong>RevenueCat</strong>. When you make or restore a purchase, RevenueCat receives a randomly generated app-specific user identifier, purchase history, product and purchase status, entitlement status, and information needed to validate and manage the subscription. This information is used only to provide subscription access and is not linked by Do It Now to your name, email, Apple ID, or Google account. Payment details are handled entirely by Apple or Google and are never seen by Do It Now or RevenueCat.</p>
         <p>RevenueCat's privacy policy: <a href="https://www.revenuecat.com/privacy/" target="_blank" rel="noopener noreferrer">revenuecat.com/privacy</a></p>
 
-        <h2>9. Speech Recognition and Third-Party Platforms</h2>
+        <h2>10. Speech Recognition and Third-Party Platforms</h2>
         <p>Voice challenge recognition uses the native speech framework provided by your device's operating system — <strong>SFSpeechRecognizer</strong> on iOS and <strong>SpeechRecognizer</strong> on Android. These platform APIs may route audio to Apple's or Google's servers for processing. Do It Now never receives, stores, or transmits your audio. The platform APIs return only a text transcript which the App uses in real time to count phrase repetitions and then discards.</p>
         <p>For details on how Apple and Google handle speech data, see their respective privacy policies.</p>
 
-        <h2>10. Children's Privacy</h2>
+        <h2>11. Children's Privacy</h2>
         <p>The App is not directed at children under 13 (or the minimum age required in your jurisdiction). We do not knowingly collect personal information from children. If you believe a child has submitted information through the App, please contact us and we will address it promptly.</p>
 
-        <h2>11. Data Retention and Deletion</h2>
+        <h2>12. Data Retention and Deletion</h2>
         <p>All local data is retained on your device until you delete it in the App's privacy settings or uninstall the App. Anonymous analytics events sent to PostHog are retained for up to 12 months. Sentry crash reports are retained for a limited diagnostic period. RevenueCat retains subscription and purchase records for as long as needed to provide subscription management and meet applicable legal, accounting, and platform requirements. You can stop future analytics and diagnostics collection at any time in Settings. For requests concerning data held by PostHog, Sentry, or RevenueCat, contact us and we will coordinate the request with the relevant provider.</p>
 
-        <h2>12. Your Rights</h2>
+        <h2>13. Your Rights</h2>
         <p>Because Do It Now holds no personal data on its own servers, most data rights (access, rectification, erasure) are exercised directly on your device by managing or uninstalling the App. For any questions or concerns about analytics or crash report data, contact us at the address below.</p>
 
-        <h2>13. Changes to This Policy</h2>
+        <h2>14. Changes to This Policy</h2>
         <p>We may update this policy from time to time. Material changes will be indicated by updating the "Last updated" date above and, where appropriate, via an in-app notice. Continued use of the App after changes take effect constitutes acceptance of the revised policy.</p>
 
-        <h2>14. Contact Us</h2>
+        <h2>15. Contact Us</h2>
         <p>If you have questions or concerns about this policy, please reach out:</p>
         <p><strong>DESEJOS STUDIO LTD</strong><br>
         Email: <a href="mailto:desejos.studio@proton.me">desejos.studio@proton.me</a></p>
