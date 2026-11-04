@@ -103,18 +103,28 @@
       margin-bottom: 40px;
     }
 
-    .feedback-frame-wrap {
-      border: 1px solid var(--border-light);
-      border-radius: 12px;
-      overflow: hidden;
-      background: #fff;
+    .feedback-cta {
+      border-top: 1px solid var(--border-light);
+      border-bottom: 1px solid var(--border-light);
+      padding: 40px 0;
     }
-    .feedback-frame-wrap iframe {
-      display: block;
-      width: 100%;
-      min-height: 720px;
-      border: none;
+    .feedback-cta p {
+      font-size: 15px;
+      max-width: 520px;
+      margin-bottom: 24px;
     }
+    .pill-button {
+      display: inline-block;
+      background: var(--void);
+      color: var(--bone);
+      border-radius: 999px;
+      padding: 16px 28px;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+    .pill-button:hover { background: var(--graphite); text-decoration: none; }
 
     footer {
       border-top: 1px solid var(--border-light);
@@ -182,13 +192,9 @@
       <h1>Feedback</h1>
       <p class="subtitle">Share ideas, report bugs, and vote on what we build next.</p>
 
-      <div class="feedback-frame-wrap">
-        <iframe
-          src="https://doit-now.clearflask.com/feedback"
-          title="Do It Now Feedback Board"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
+      <div class="feedback-cta">
+        <p>The feedback board lives on Fider. Post an idea or a bug, or vote on what other people have asked for.</p>
+        <a class="pill-button" href="https://doitnow.fider.io/" target="_blank" rel="noopener noreferrer">Open the feedback board</a>
       </div>
     </div>
   </main>
